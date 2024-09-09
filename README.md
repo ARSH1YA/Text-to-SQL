@@ -21,7 +21,39 @@ This project is a web-based application that converts natural language questions
    git clone https://github.com/yourusername/text-to-sql.git
    cd text-to-sql
 
-2. # Set up a virtual environment (optional but recommended):
+2. **Set up a virtual environment** (optional but recommended):
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install the required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Set up the .env file: Create a .env file in the project root directory and add your Google API key like this:**
+   ```bash
+   GOOGLE_API_KEY=your_api_key_here
+   
+6. **Run the application:streamlit run app.py**
+   ```bash
+   streamlit run app.py
+   
+8. **Open your browser and go to http://localhost:8501 to use the app.**
+
+# Usage
+ 1. Enter a question in the input field (e.g., "How many students are in the Data Science class?").
+ 2. Click the "Ask the question" button.
+ 3. The app will display the generated SQL query and the results fetched from the SQLite database.
+
+## Project Structure
+
+```plaintext
+.
+├── app.py              # Main Streamlit app handling UI and interactions
+├── sql.py              # Handles SQLite database creation and querying
+├── .env                # Stores environment variables like API keys
+├── requirements.txt    # Python dependencies
+├── student.db          # SQLite database file with student data
+└── README.md           # Project documentation
+
+   
